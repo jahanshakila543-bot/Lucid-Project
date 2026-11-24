@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+/* Global Resets start here */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #777777;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-responsive {
+    display: inline-block;
+}
+/* Global Resets end here */
+
+/* Grid System start here */
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+[class*='col-'] {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 1px;
+}
+
+.col-1  { width: 8.33%; }
+.col-2  { width: 16.66%; }
+.col-3  { width: 25%; }
+.col-4  { width: 33.33%; }
+.col-5  { width: 41.66%; }
+.col-6  { width: 50%; }
+.col-7  { width: 58.33%; }
+.col-8  { width: 66.66%; }
+.col-9  { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%; }
+
+.offset-2 { margin-left: 16.66%; }
+/* Grid System end here */
+
+/* Utility Classes start here */
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.text-left   { text-align: left; }
+.text-white  { color: #ffffff; }
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+}
+/* Utility Classes end here */
+
+/* Reusable Components start here */
+.sub-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #008ed6;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.title-line {
+    width: 40px;
+    height: 2px;
+    background-color: #008ed6;
+    margin: 15px auto 35px auto;
+}
+
+.title-line-left {
+    width: 40px;
+    height: 2px;
+    background-color: #008ed6;
+    margin: 15px 0 25px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #008ed6;
+    color: #ffffff;
+    border-color: #008ed6;
+}
+
+.btn-primary:hover {
+    background-color: #0076b3;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #777777;
+    border-color: #cccccc;
+    margin-left: 10px;
+}
+
+.btn-outline-white {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+    margin-right: 10px;
+}
+
+.btn-outline-blue {
+    background-color: transparent;
+    color: #008ed6;
+    border-color: #008ed6;
+}
+
+.btn-outline-blue:hover {
+    background-color: #008ed6;
+    color: #ffffff;
+}
+/* Reusable Components end here */
+
+/* Header Section start here */
+.main-header {
+    background-color: transparent;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    max-height: 28px;
+    vertical-align: middle;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    color: #bbbbbb;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: #008ed6;
+}
+/* Header Section end here */
+
+
+
+/* Hero Section start here */
+.hero-section {
+    background-color: #17181c;
+    background-image: url('../img/bg.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 150px 0 60px 0;
+    color: #ffffff;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 30px;
+}
+/* Hero Section end here */
+
+/* Product List Section start here */
+.product-list-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.feature-card {
+    padding: 15px;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #008ed6;
+    font-size: 20px;
+}
+
+.feature-card h3 {
+    font-size: 16px;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+/* Product List Section end here */
+
+/* Beauty Section start here */
+.beauty-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.check-list li {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.check-list i {
+    color: #008ed6;
+    margin-right: 8px;
+}
+/* Beauty Section end here */
+
+/* Super Easy Section start here */
+.super-easy-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+/* Super Easy Section end here */
+
+/* Testimonials Section start here */
+.testimonials-section {
+    background: #17181c url('../img/Warstwa 8.png') center center/cover no-repeat;
+    padding: 80px 0;
+    color: #ffffff;
+}
+
+.testimonial-card {
+    padding: 20px;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #dddddd;
+}
+
+.user-meta {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-info h4 {
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.user-info span {
+    font-size: 11px;
+    color: #888888;
+}
+/* Testimonials Section end here */
+
+
+/* Theme Banner Section start here */
+.theme-banner-section {
+    background-color: #15141a;
+    padding: 35px 0;
+    color: #ffffff;
+}
+
+.theme-banner-section h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+/* Theme Banner Section end here */
+
+
+/* Pricing Section start here */
+.pricing-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.pricing-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-header {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0;
+}
+
+.pricing-header h3 {
+    font-size: 14px;
+    color: #1a1a1a;
+}
+
+.pricing-body {
+    padding: 25px 15px;
+}
+
+.price-box {
+    margin-bottom: 15px;
+}
+
+.price-box .currency {
+    font-size: 18px;
+    vertical-align: top;
+    color: #1a1a1a;
+}
+
+.price-box .amount {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.price-box .period {
+    font-size: 11px;
+    color: #999999;
+}
+
+.pricing-card.featured {
+    border-color: #008ed6;
+}
+
+.pricing-card.featured .pricing-header {
+    background-color: #008ed6;
+}
+
+.pricing-card.featured .pricing-header h3 {
+    color: #ffffff;
+}
+/* Pricing Section end here */
+
+
+/* Contact Us Section start here */
+.contact-us-section {
+    padding: 80px 0 40px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-card i {
+    font-size: 24px;
+    color: #008ed6;
+    margin-bottom: 15px;
+}
+/* Contact Us Section end here */
+
+
+/* Form Section start here */
+.form-section {
+    padding: 0 0 80px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-form-box {
+    background-color: #15141a;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: transparent;
+    border: 1px solid #333333;
+    color: #ffffff;
+    border-radius: 3px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.form-control:focus {
+    border-color: #008ed6;
+}
+/* Form Section end here */
+
+
+/* Location Section start here */
+.location-section {
+    line-height: 0;
+}
+/* Location Section end here */
+
+
+/* Main Footer start here */
+.main-footer {
+    background-color: #15141a;
+    padding: 30px 0;
+    color: #666666;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: #888888;
+    margin: 0 8px;
+    font-size: 16px;
+}
+
+.social-icons a:hover {
+    color: #008ed6;
+}
+
+.copyright {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+/* Main Footer end here */
+
+
+
+
+
+
